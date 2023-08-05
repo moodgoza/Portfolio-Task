@@ -116,6 +116,7 @@ article > h1 {
   font-weight: var(--font-weight-h1);
   font-size: var(--font-size-h1);
   flex-direction: column;
+  margin-top: 3rem;
 }
 
 article > h1::after {
