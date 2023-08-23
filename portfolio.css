@@ -16,6 +16,7 @@
   --color-h1: #fff;
   --box-background: #2b2a2a;
 }
+
 main {
   display: flex;
   flex-direction: column;
@@ -61,9 +62,18 @@ nav > a {
   font-weight: bold;
 }
 
+@keyframes type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 635px;
+  }
+}
+
 #definition {
   color: var(--color-h1);
-
+  transition: 1s;
   font-family: var(--h1-font);
   line-height: var(--line-height-h1);
   font-weight: var(--font-weight-h1);
@@ -74,7 +84,13 @@ nav > a {
   justify-content: center;
   margin-top: 10rem;
 }
-
+#definition h2 {
+  width: fit-content;
+  /* animation: type 8s 0s both infinite;
+  border-right: 1px solid white;
+  white-space: nowrap;
+  overflow: hidden; */
+}
 #definition a {
   background-color: var(--box-background);
   border-radius: 99999px;
@@ -188,10 +204,6 @@ article > h1::after {
   justify-content: center;
 }
 
-section {
-  margin-inline: 10px;
-}
-
 #my-skills {
   display: flex;
   flex-direction: column;
@@ -205,7 +217,7 @@ section {
   display: flex;
   gap: 100px;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 #lang-and-fram {
@@ -251,13 +263,14 @@ section {
   font-weight: var(--font-weight-p);
 }
 
-#lang-and-fram > div > div{
+#lang-and-fram > div > div {
   width: 80%;
   height: 2rem;
   background-color: #156962;
   border-radius: 9999px;
   display: flex;
   align-items: center;
+
 }
 
 #lang-and-fram > div > div > span {
@@ -287,9 +300,7 @@ li {
   line-height: var(--line-height-p);
   font-size: var(--font-size-p);
   font-weight: var(--font-weight-p);
-  
 }
-
 
 #problem-solving a:hover {
   color: rgb(94, 94, 189);
@@ -305,8 +316,6 @@ li {
   color: var(--color-h1);
   padding: 0.125rem;
   border-radius: 5%;
-
- 
 }
 #problem-solving h4 {
   color: var(--color-h1);
@@ -343,19 +352,17 @@ hr {
 }
 
 #my-projects img {
-  height:300px; 
-  width:500px;
+  height: 300px;
+  width: 500px;
   border-radius: 1%;
 }
 
 #my-projects article {
   background-color: var(--box-background);
-
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding: 3rem;
   border-radius: 1%;
 }
 
@@ -438,15 +445,13 @@ footer a {
 }
 
 footer {
-  height: 20rem;
+  height: 10rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   background-color: var(--box-background);
   opacity: 0.88;
-  
-  
 }
 
 #social > section {
@@ -476,7 +481,15 @@ footer {
   font-weight: var(--font-weight-h1);
 }
 
+
+@media (max-width: 576px) {
+  #definition {
+    margin-top: 15rem;
+  }
+}
 @media (max-width: 750px) {
+
+
   .about-me-section > img {
     width: 100%;
   }
@@ -515,12 +528,13 @@ footer {
     width: 250px;
   }
 
-  #lang-and-fram > div >div > span {
+  #lang-and-fram > div > div > span {
     font-size: 10px;
   }
 }
 
 @media (min-width: 750px) and (max-width: 1126px) {
+  
   .text-about-me {
     width: 100%;
     border-radius: 2%;
@@ -531,6 +545,7 @@ footer {
     width: 30%;
   }
 
+ 
   .text-about-me {
     width: 30%;
   }
@@ -555,9 +570,24 @@ footer {
 
 @media (max-width: 1200px) {
   #my-projects > section {
+    
     display: grid;
     grid-template-columns: 3fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 100px;
+  }
+}
+@media (max-width: 308px) {
+  #definition {
+    margin-top: 20rem;
+  }
+}
+#my-skills > section {
+  
+  justify-content: center;
+}
+@media (max-width: 274px) {
+  #definition {
+    margin-top: 25rem;
   }
 }
